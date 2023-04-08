@@ -1,0 +1,15 @@
+{% extends "base.html"%}
+{% block content %}
+<h1>Django Message Board Home Page</h1>
+<u1>
+    {% for post in post_list %}
+    <div class = "post_Entry">
+        <h3><a href="{%url 'post_details' post.pk%}">{{post.title}}</a></h3>
+        <p>{{post.body}}</p>
+
+    </div>
+    
+    {% endfor %}
+
+</u1>
+{% endblock content %}
